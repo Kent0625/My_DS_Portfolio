@@ -8,6 +8,7 @@ project:
     - title: "Laboratory Activities"
       children:
         - file: notebooks/01_perceptron_basics.ipynb
+	- file: notebooks/02_activation_functions.ipynb
 site:
   template: book-theme
   title: "DS Elective 4: Deep Learning Portfolio"
