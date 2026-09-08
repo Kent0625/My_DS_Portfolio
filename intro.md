@@ -4,7 +4,7 @@ Welcome to my academic and professional Data Science portfolio. This site showca
 
 ---
 
-## 👤 About Me
+## About Me
 
 - **Name:** Kent John Ugsimar Macalam
 - **Program & Year:** Bachelor of Science in Data Science (BSDS) — 4th Year (AY 2026–2027)
@@ -12,7 +12,7 @@ Welcome to my academic and professional Data Science portfolio. This site showca
 - **GitHub:** [Kent0625](https://github.com/Kent0625)
 
 ### Introduction
-I am a senior Data Science student passionate about transforming data into actionable insights and intelligent systems. This portfolio serves as an open compilation of my work, documenting my progress in deep learning foundations, neural network architectures, and real-world predictive modeling.
+I am a Data Science student passionate about transforming data into actionable insights and intelligent systems. This portfolio serves as an open compilation of my work, documenting my progress in deep learning foundations, neural network architectures, and real-world predictive modeling.
 
 ---
 
@@ -26,7 +26,7 @@ I am a senior Data Science student passionate about transforming data into actio
 
 ---
 
-## 🛠 Skills & Tools
+##  Skills & Tools
 
 - **Programming:** Python, SQL, Bash
 - **Data & Math Libraries:** NumPy, Pandas, SciPy
