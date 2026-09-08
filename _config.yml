@@ -1,0 +1,21 @@
+# Book settings
+title: "DS Elective 4: Deep Learning Portfolio"
+author: "Kent John Ugsimar Macalam"
+
+# Repository settings
+repository:
+  url: "https://github.com/Kent0625/Data_Science_portfolio"
+  path_to_book: ""
+  branch: "main"
+
+# Execution settings
+execute:
+  execute_notebooks: "auto"
+
+# HTML settings
+html:
+  use_repository_button: true
+  use_issues_button: true
+  home_page_in_navbar: true
+  extra_navbar: |
+    <p>BS Data Science — USTP</p>

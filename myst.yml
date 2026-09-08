@@ -1,0 +1,11 @@
+version: 1
+project:
+  title: "DS Elective 4: Deep Learning Portfolio"
+  authors:
+    - name: "Kent John Ugsimar Macalam"
+  toc:
+    - file: intro.md
+    - file: notebooks/01_perceptron_basics.ipynb
+site:
+  template: book-theme
+  title: "DS Elective 4: Deep Learning Portfolio"

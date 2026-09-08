@@ -1,0 +1,4 @@
+format: jb-book
+root: intro
+chapters:
+  - file: notebooks/01_perceptron_basics
