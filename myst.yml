@@ -1,8 +1,8 @@
 version: 1
 project:
-  title: "DS Elective 4: Deep Learning Portfolio"
+  title: "My Data Science Portfolio"
   authors:
-    - name: "Kent John Ugsimar Macalam"
+    - name: "Kent John U. Macalam"
   toc:
     - file: intro.md
     - title: "Featured Projects"
@@ -20,7 +20,7 @@ project:
         - file: notebooks/06_lab_task_5.ipynb
 site:
   template: book-theme
-  title: "Kent John Macalam | Data Science & Deep Learning Portfolio"
+  title: "Kent John Macalam | Data Science Portfolio"
   options:
     style: assets/custom.css
     favicon: assets/favicon.svg
