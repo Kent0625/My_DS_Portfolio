@@ -1,7 +1,6 @@
 # Book settings
-title: "Data Science & Deep Learning Portfolio"
+title: "DS Elective 4: Deep Learning Portfolio"
 author: "Kent John Ugsimar Macalam"
-logo: ""
 
 # Repository settings
 repository:
@@ -13,28 +12,10 @@ repository:
 execute:
   execute_notebooks: "auto"
 
-# Launch buttons
-launch_buttons:
-  colab_url: "https://colab.research.google.com"
-
 # HTML settings
 html:
   use_repository_button: true
-  use_issues_button: false
-  use_download_button: true
+  use_issues_button: true
   home_page_in_navbar: true
   extra_navbar: |
     <p>BS Data Science — USTP</p>
-
-# Sphinx configuration options
-sphinx:
-  config:
-    html_theme_options:
-      repository_url: "https://github.com/Kent0625/Data_Science_portfolio"
-      use_repository_button: true
-      use_issues_button: false
-      use_download_button: true
-      launch_buttons:
-        colab_url: "https://colab.research.google.com"
-      show_navbar_depth: 2
-      show_toc_level: 2
