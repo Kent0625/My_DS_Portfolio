@@ -10,6 +10,9 @@ Welcome to my academic and professional Data Science portfolio. This site showca
 - **Program & Year:** Bachelor of Science in Data Science (BSDS) — 4th Year (AY 2026–2027)
 - **Institution:** University of Science and Technology of Southern Philippines (USTP), Cagayan de Oro City
 - **GitHub:** [Kent0625](https://github.com/Kent0625)
+- **LinkedIn:** [Kent John Macalam](https://www.linkedin.com/in/kent-john-macalam-4229a52b3/)
+- **Live Portfolio (Web):** [kent-macalam-portfolio.onrender.com](https://kent-macalam-portfolio.onrender.com/)
+- **Resume:** [Kent_John_Macalam_RESUME.pdf](assets/documents/Kent_John_Macalam_RESUME.pdf)
 
 ### Introduction
 I am a Data Science student passionate about transforming data into actionable insights and intelligent systems. This portfolio serves as an open compilation of my work, documenting my progress in deep learning foundations, neural network architectures, and real-world predictive modeling.
@@ -28,15 +31,31 @@ I am a Data Science student passionate about transforming data into actionable i
 
 ##  Skills & Tools
 
-- **Programming:** Python, SQL, Bash
-- **Data & Math Libraries:** NumPy, Pandas, SciPy
-- **Visualization:** Matplotlib, Seaborn
-- **Machine Learning / Deep Learning:** Scikit-Learn, PyTorch, TensorFlow
-- **Workflow & Version Control:** Jupyter Notebooks, Jupyter Book, Git, GitHub, MyST Markdown
+- **Programming:** Python, R, SQL, Bash
+- **Data & Math Libraries:** NumPy, Pandas, Scikit-Learn, SciPy, XGBoost
+- **Visualization:** Matplotlib, Seaborn, ggplot2
+- **Deep Learning & GenAI:** PyTorch, TensorFlow, Google Gemini API, Streamlit
+- **Workflow & Version Control:** Jupyter Notebooks, Jupyter Book, Git, GitHub, MyST Markdown, Hugging Face Spaces
 
 ---
 
-## Featured Projects & Activities
+## Featured Data Science Projects
+
+- **[The Life of a Bill](projects/01_life_of_a_bill.md)**  
+  Supervised machine learning (XGBoost) predicting Philippine Senate bill movement across 7,352 legislative records.  
+  *[Live App](https://kent0625-life-of-a-bill.hf.space) · [GitHub Source](https://github.com/Kent0625/ML_FINAL_PROJECT)*
+
+- **[From Farm to Cup](projects/02_from_farm_to_cup.md)**  
+  Statistical bootstrap resampling and BCa confidence intervals quantifying income uncertainty for Bukidnon coffee farmers.  
+  *[GitHub Source](https://github.com/Kent0625/bootstrap-coffee-farmers-income)*
+
+- **[SmartTripCDO](projects/03_smartrip_cdo.md)**  
+  Generative AI and static RAG travel assistant grounded in 47 curated Cagayan de Oro points of interest.  
+  *[Live App](https://kent0625-smartrip-cdo.hf.space) · [GitHub Source](https://github.com/Kent0625/smartrip_cdo)*
+
+---
+
+## Deep Learning Laboratory Activities
 
 - **[Laboratory Task 1: Four Types of Data Analytics](notebooks/01_lab_task_1.ipynb)**  
   Formulation of descriptive, diagnostic, predictive, and prescriptive analytical inquiries for a pharmaceutical scenario.

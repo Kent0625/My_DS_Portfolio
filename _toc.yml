@@ -1,6 +1,9 @@
 format: jb-book
 root: intro
 chapters:
+  - file: projects/01_life_of_a_bill
+  - file: projects/02_from_farm_to_cup
+  - file: projects/03_smartrip_cdo
   - file: notebooks/01_lab_task_1
   - file: notebooks/02_lecture_task_1
   - file: notebooks/03_lab_task_2

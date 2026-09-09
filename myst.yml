@@ -5,6 +5,11 @@ project:
     - name: "Kent John Ugsimar Macalam"
   toc:
     - file: intro.md
+    - title: "Featured Projects"
+      children:
+        - file: projects/01_life_of_a_bill.md
+        - file: projects/02_from_farm_to_cup.md
+        - file: projects/03_smartrip_cdo.md
     - title: "Laboratory Activities"
       children:
         - file: notebooks/01_lab_task_1.ipynb
