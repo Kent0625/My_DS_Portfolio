@@ -1,0 +1,481 @@
+/* ==========================================================================
+   BrewedOps-Inspired Design System for Kent John Macalam's Portfolio
+   Responsive Bento Grid, Glassmorphism, Theme Adaptability & Micro-animations
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
+
+  /* Theme tokens - Light Mode (Warm Cream / Crisp Slate) */
+  --bo-bg: #f8fafc;
+  --bo-surface: #ffffff;
+  --bo-surface-hover: #f1f5f9;
+  --bo-surface-glass: rgba(255, 255, 255, 0.85);
+  --bo-border: #e2e8f0;
+  --bo-border-glow: rgba(249, 115, 22, 0.35);
+  
+  --bo-text-primary: #0f172a;
+  --bo-text-secondary: #334155;
+  --bo-text-muted: #64748b;
+  
+  --bo-accent-orange: #f97316;
+  --bo-accent-orange-hover: #ea580c;
+  --bo-accent-blue: #0284c7;
+  --bo-accent-emerald: #10b981;
+  --bo-accent-purple: #8b5cf6;
+
+  --bo-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --bo-shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  --bo-shadow-lg: 0 12px 30px -4px rgba(0, 0, 0, 0.08);
+  --bo-card-radius: 16px;
+}
+
+/* Dark Mode Tokens (Deep Midnight Slate / Cyber Glow) */
+html.dark, [data-theme="dark"] {
+  --bo-bg: #070d18;
+  --bo-surface: #0f192b;
+  --bo-surface-hover: #16243b;
+  --bo-surface-glass: rgba(15, 25, 43, 0.85);
+  --bo-border: rgba(255, 255, 255, 0.09);
+  --bo-border-glow: rgba(249, 115, 22, 0.5);
+
+  --bo-text-primary: #f8fafc;
+  --bo-text-secondary: #cbd5e1;
+  --bo-text-muted: #94a3b8;
+
+  --bo-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --bo-shadow-md: 0 6px 20px rgba(0, 0, 0, 0.5);
+  --bo-shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bo-bg: #070d18;
+    --bo-surface: #0f192b;
+    --bo-surface-hover: #16243b;
+    --bo-surface-glass: rgba(15, 25, 43, 0.85);
+    --bo-border: rgba(255, 255, 255, 0.09);
+    --bo-border-glow: rgba(249, 115, 22, 0.5);
+    --bo-text-primary: #f8fafc;
+    --bo-text-secondary: #cbd5e1;
+    --bo-text-muted: #94a3b8;
+  }
+}
+
+/* Base resets & typography */
+body {
+  font-family: var(--font-sans);
+  color: var(--bo-text-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   1. Bento Hero Section
+   ========================================================================== */
+
+.bento-hero {
+  position: relative;
+  background: var(--bo-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-card-radius);
+  padding: 2.25rem 2rem;
+  margin: 1.5rem 0 2rem 0;
+  box-shadow: var(--bo-shadow-md);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bento-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, rgba(2, 132, 199, 0.08) 60%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bento-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Status Pill */
+.hero-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #10b981;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.25rem;
+}
+
+.pulse-indicator {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+.pulse-indicator::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #10b981;
+  animation: pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+
+.hero-main-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--bo-text-primary);
+  margin: 0 0 0.75rem 0;
+}
+
+.hero-subhead {
+  font-size: 1.1rem;
+  color: var(--bo-text-secondary);
+  max-width: 740px;
+  margin: 0 0 1.5rem 0;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* Hero Action Buttons & Chips */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.15rem;
+  border-radius: 10px;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.hero-btn-primary {
+  background: var(--bo-accent-orange);
+  color: #ffffff !important;
+  border: 1px solid var(--bo-accent-orange-hover);
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.25);
+}
+
+.hero-btn-primary:hover {
+  background: var(--bo-accent-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+}
+
+.hero-btn-secondary {
+  background: var(--bo-surface);
+  color: var(--bo-text-primary) !important;
+  border: 1px solid var(--bo-border);
+}
+
+.hero-btn-secondary:hover {
+  background: var(--bo-surface-hover);
+  border-color: var(--bo-accent-orange);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   2. Tech Stack Ticker (BrewedOps Marquee)
+   ========================================================================== */
+
+.ticker-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: var(--bo-surface);
+  border: 1px solid var(--bo-border);
+  border-radius: 12px;
+  padding: 0.75rem 0;
+  margin: 1.5rem 0 2.25rem 0;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  animation: scroll-ticker 24s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--bo-text-secondary);
+}
+
+.ticker-dot {
+  color: var(--bo-accent-orange);
+  font-size: 0.75rem;
+}
+
+@keyframes scroll-ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   3. Metrics & Stats Grid
+   ========================================================================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.stat-card {
+  background: var(--bo-surface);
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-card-radius);
+  padding: 1.25rem 1.4rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--bo-shadow-sm);
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--bo-accent-orange);
+  box-shadow: var(--bo-shadow-md);
+}
+
+.stat-num {
+  font-size: 1.85rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--bo-accent-orange);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bo-text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.stat-desc {
+  font-size: 0.78rem;
+  color: var(--bo-text-muted);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   4. Bento Grid Cards (Projects & Labs)
+   ========================================================================== */
+
+.bento-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--bo-text-primary);
+  margin: 2.5rem 0 1.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.section-bullet {
+  color: var(--bo-accent-orange);
+  font-size: 1.2rem;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.bento-card {
+  position: relative;
+  background: var(--bo-surface);
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-card-radius);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--bo-shadow-sm);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--bo-accent-orange);
+  box-shadow: 0 12px 28px -4px rgba(249, 115, 22, 0.12), var(--bo-shadow-md);
+}
+
+.bento-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.bento-tag {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 6px;
+  background: rgba(249, 115, 22, 0.1);
+  color: var(--bo-accent-orange);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+}
+
+.bento-tag.tag-blue {
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--bo-accent-blue);
+  border-color: rgba(2, 132, 199, 0.25);
+}
+
+.bento-tag.tag-emerald {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--bo-accent-emerald);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.bento-tag.tag-purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--bo-accent-purple);
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+.bento-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bo-text-primary);
+  line-height: 1.35;
+  margin: 0 0 0.5rem 0;
+}
+
+.bento-card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bento-card-title a:hover {
+  color: var(--bo-accent-orange);
+}
+
+.bento-card-body {
+  font-size: 0.88rem;
+  color: var(--bo-text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.bento-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bo-border);
+  font-size: 0.82rem;
+}
+
+.bento-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.bento-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  color: var(--bo-accent-orange);
+  text-decoration: none !important;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.bento-link:hover {
+  color: var(--bo-accent-orange-hover);
+  transform: translateX(2px);
+}
+
+.bento-sublink {
+  font-size: 0.8rem;
+  color: var(--bo-text-muted);
+  text-decoration: none !important;
+}
+
+.bento-sublink:hover {
+  color: var(--bo-text-primary);
+}
+
+/* ==========================================================================
+   5. Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .hero-main-title {
+    font-size: 1.85rem;
+  }
+  .bento-hero {
+    padding: 1.5rem 1.25rem;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

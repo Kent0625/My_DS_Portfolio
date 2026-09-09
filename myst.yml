@@ -20,4 +20,8 @@ project:
         - file: notebooks/06_lab_task_5.ipynb
 site:
   template: book-theme
-  title: "DS Elective 4: Deep Learning Portfolio"
+  title: "Kent John Macalam | Data Science & Deep Learning Portfolio"
+  options:
+    style: assets/custom.css
+    favicon: assets/favicon.svg
+    logo_text: "Kent John Macalam"
