@@ -38,8 +38,18 @@ I am a Data Science student passionate about transforming data into actionable i
 
 ## Featured Projects & Activities
 
-- **[Laboratory Tasks Compilation](notebooks/laboratory_tasks.ipynb)**  
-  A compilation of deep learning tasks covering analytics types, AI reaction paper, forward/backward propagation in NumPy, linear regression in PyTorch, and PyTorch tensor operations.
+- **[Laboratory Task 1: Four Types of Data Analytics](notebooks/01_lab_task_1.ipynb)**  
+  Formulation of descriptive, diagnostic, predictive, and prescriptive analytical inquiries for a pharmaceutical scenario.
+- **[Lecture Task 1: Reaction Paper — WIRED Film: Living in the Age of AI](notebooks/02_lecture_task_1.ipynb)**  
+  Reaction essay addressing breakthroughs, future prospects, challenges, and ethics in modern AI.
+- **[Laboratory Task 2: ANN Forward Pass & Error Calculation](notebooks/03_lab_task_2.ipynb)**  
+  Step-by-step manual derivation of ReLU activations, forward propagation, and error metrics.
+- **[Laboratory Task 3: Forward & Backward Propagation (NumPy)](notebooks/04_lab_task_3.ipynb)**  
+  Python implementation of full forward and backward passes with gradient descent parameter updates.
+- **[Laboratory Task 4: 2-Layer Linear Regression in PyTorch](notebooks/05_lab_task_4.ipynb)**  
+  End-to-end PyTorch regression training pipeline with MSE Loss, SGD optimizer, and DataLoader batching.
+- **[Laboratory Task 5: PyTorch Tensor Operations & Manipulation](notebooks/06_lab_task_5.ipynb)**  
+  Core tensor manipulations, dtype conversions, reshaping, slicing, and matrix multiplication.
 
 ---
 

@@ -7,7 +7,12 @@ project:
     - file: intro.md
     - title: "Laboratory Activities"
       children:
-        - file: notebooks/laboratory_tasks.ipynb
+        - file: notebooks/01_lab_task_1.ipynb
+        - file: notebooks/02_lecture_task_1.ipynb
+        - file: notebooks/03_lab_task_2.ipynb
+        - file: notebooks/04_lab_task_3.ipynb
+        - file: notebooks/05_lab_task_4.ipynb
+        - file: notebooks/06_lab_task_5.ipynb
 site:
   template: book-theme
   title: "DS Elective 4: Deep Learning Portfolio"

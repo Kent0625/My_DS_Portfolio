@@ -1,4 +1,9 @@
 format: jb-book
 root: intro
 chapters:
-  - file: notebooks/laboratory_tasks
+  - file: notebooks/01_lab_task_1
+  - file: notebooks/02_lecture_task_1
+  - file: notebooks/03_lab_task_2
+  - file: notebooks/04_lab_task_3
+  - file: notebooks/05_lab_task_4
+  - file: notebooks/06_lab_task_5
