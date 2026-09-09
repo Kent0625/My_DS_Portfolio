@@ -11,10 +11,10 @@
       Turning complex datasets into explainable machine learning models, statistical inference workflows, and deep learning architectures.
     </p>
     <div class="hero-actions">
-      <a class="hero-btn hero-btn-primary" href="#featured-projects">Explore Projects &darr;</a>
-      <a class="hero-btn hero-btn-secondary" href="assets/documents/Kent_John_Macalam_RESUME.pdf" download="Kent_John_Macalam_RESUME.pdf">Download Resume &darr;</a>
-      <a class="hero-btn hero-btn-secondary" href="https://github.com/Kent0625" target="_blank" rel="noopener">GitHub &nearr;</a>
-      <a class="hero-btn hero-btn-secondary" href="https://www.linkedin.com/in/kent-john-macalam-4229a52b3/" target="_blank" rel="noopener">LinkedIn &nearr;</a>
+      <a class="hero-btn hero-btn-primary" href="#featured-projects">Explore Projects <span class="btn-icon">&darr;</span></a>
+      <a class="hero-btn hero-btn-secondary" href="assets/documents/Kent_John_Macalam_RESUME.pdf" download="Kent_John_Macalam_RESUME.pdf">Download Resume <span class="btn-icon">&darr;</span></a>
+      <a class="hero-btn hero-btn-secondary" href="https://github.com/Kent0625" target="_blank" rel="noopener">GitHub <span class="btn-icon">&nearr;</span></a>
+      <a class="hero-btn hero-btn-secondary" href="https://www.linkedin.com/in/kent-john-macalam-4229a52b3/" target="_blank" rel="noopener">LinkedIn <span class="btn-icon">&nearr;</span></a>
     </div>
   </div>
 </div>
@@ -260,13 +260,38 @@
 
 ## About Me &amp; Background
 
-- **Name:** Kent John Ugsimar Macalam
-- **Academic Program:** Bachelor of Science in Data Science (BSDS) &mdash; 4th Year (AY 2026&ndash;2027)
-- **Institution:** University of Science and Technology of Southern Philippines (USTP), Cagayan de Oro City
-- **GitHub:** [Kent0625](https://github.com/Kent0625)
-- **LinkedIn:** [Kent John Macalam](https://www.linkedin.com/in/kent-john-macalam-4229a52b3/)
-- **Primary Portfolio (Render):** [kent-macalam-portfolio.onrender.com](https://kent-macalam-portfolio.onrender.com/)
-- **Resume:** [Kent_John_Macalam_RESUME.pdf](assets/documents/Kent_John_Macalam_RESUME.pdf)
+<div class="profile-card">
+  <div class="profile-grid">
+    <div class="profile-field">
+      <span class="profile-label">Name</span>
+      <span class="profile-value">Kent John Ugsimar Macalam</span>
+    </div>
+    <div class="profile-field">
+      <span class="profile-label">Academic Program</span>
+      <span class="profile-value">Bachelor of Science in Data Science (BSDS) &mdash; 4th Year (AY 2026&ndash;2027)</span>
+    </div>
+    <div class="profile-field">
+      <span class="profile-label">Institution</span>
+      <span class="profile-value">University of Science and Technology of Southern Philippines (USTP), Cagayan de Oro City</span>
+    </div>
+    <div class="profile-field">
+      <span class="profile-label">GitHub</span>
+      <span class="profile-value"><a href="https://github.com/Kent0625" target="_blank" rel="noopener">Kent0625 <span class="profile-arrow">&nearr;</span></a></span>
+    </div>
+    <div class="profile-field">
+      <span class="profile-label">LinkedIn</span>
+      <span class="profile-value"><a href="https://www.linkedin.com/in/kent-john-macalam-4229a52b3/" target="_blank" rel="noopener">Kent John Macalam <span class="profile-arrow">&nearr;</span></a></span>
+    </div>
+    <div class="profile-field">
+      <span class="profile-label">Primary Portfolio (Render)</span>
+      <span class="profile-value"><a href="https://kent-macalam-portfolio.onrender.com/" target="_blank" rel="noopener">kent-macalam-portfolio.onrender.com <span class="profile-arrow">&nearr;</span></a></span>
+    </div>
+    <div class="profile-field">
+      <span class="profile-label">Resume</span>
+      <span class="profile-value"><a href="assets/documents/Kent_John_Macalam_RESUME.pdf" download="Kent_John_Macalam_RESUME.pdf">Kent_John_Macalam_RESUME.pdf <span class="profile-arrow">&darr;</span></a></span>
+    </div>
+  </div>
+</div>
 
 ---
 
