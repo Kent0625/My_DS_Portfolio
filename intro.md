@@ -1,4 +1,4 @@
-# Data Science & Deep Learning Portfolio
+# Data Science Portfolio
 
 <div class="bento-hero">
   <div class="bento-hero-inner">
