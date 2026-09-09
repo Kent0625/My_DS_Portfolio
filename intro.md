@@ -38,8 +38,8 @@ I am a Data Science student passionate about transforming data into actionable i
 
 ## Featured Projects & Activities
 
-- **[Activity 1: Single Artificial Neuron (Perceptron)](notebooks/01_perceptron_basics.ipynb)**  
-  An implementation demonstrating linear combination and the sigmoid activation function for a single artificial neuron.
+- **[Laboratory Tasks Compilation](notebooks/laboratory_tasks.ipynb)**  
+  A compilation of deep learning tasks covering analytics types, AI reaction paper, forward/backward propagation in NumPy, linear regression in PyTorch, and PyTorch tensor operations.
 
 ---
 
