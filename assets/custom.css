@@ -1,94 +1,352 @@
 /* ==========================================================================
-   BrewedOps-Inspired Design System for Kent John Macalam's Portfolio
-   Responsive Bento Grid, Glassmorphism, Theme Adaptability & Micro-animations
+   Kent John Macalam — Data Science & Deep Learning Portfolio
+   Light & Dark Adaptive Design System
+   WCAG AA/AAA High Contrast, Bento Grid, Glassmorphism & Fluid Micro-interactions
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-:root {
+/* --------------------------------------------------------------------------
+   1. Theme Tokens: Light Mode (Default & html.light)
+   -------------------------------------------------------------------------- */
+:root,
+html.light {
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
 
-  /* Theme tokens - Light Mode (Warm Cream / Crisp Slate) */
+  /* Surfaces & Backgrounds */
   --bo-bg: #f8fafc;
   --bo-surface: #ffffff;
   --bo-surface-hover: #f1f5f9;
-  --bo-surface-glass: rgba(255, 255, 255, 0.85);
-  --bo-border: #e2e8f0;
-  --bo-border-glow: rgba(249, 115, 22, 0.35);
+  --bo-surface-glass: rgba(255, 255, 255, 0.94);
+  --bo-surface-card: #ffffff;
   
+  /* Borders */
+  --bo-border: #e2e8f0;
+  --bo-border-subtle: #f1f5f9;
+  --bo-border-glow: rgba(249, 115, 22, 0.25);
+  
+  /* High-Contrast Typography */
   --bo-text-primary: #0f172a;
   --bo-text-secondary: #334155;
   --bo-text-muted: #64748b;
   
-  --bo-accent-orange: #f97316;
-  --bo-accent-orange-hover: #ea580c;
+  /* Accents (Tuned for Crisp Light Contrast) */
+  --bo-accent-orange: #ea580c;
+  --bo-accent-orange-bright: #f97316;
+  --bo-accent-orange-hover: #c2410c;
   --bo-accent-blue: #0284c7;
-  --bo-accent-emerald: #10b981;
-  --bo-accent-purple: #8b5cf6;
+  --bo-accent-emerald: #047857;
+  --bo-accent-purple: #7c3aed;
 
-  --bo-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --bo-shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
-  --bo-shadow-lg: 0 12px 30px -4px rgba(0, 0, 0, 0.08);
+  /* Shadows */
+  --bo-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --bo-shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  --bo-shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
   --bo-card-radius: 16px;
 }
 
-/* Dark Mode Tokens (Deep Midnight Slate / Cyber Glow) */
-html.dark, [data-theme="dark"] {
+/* --------------------------------------------------------------------------
+   2. Theme Tokens: Dark Mode (html.dark)
+   -------------------------------------------------------------------------- */
+html.dark {
+  /* Surfaces & Backgrounds */
   --bo-bg: #070d18;
   --bo-surface: #0f192b;
   --bo-surface-hover: #16243b;
-  --bo-surface-glass: rgba(15, 25, 43, 0.85);
+  --bo-surface-glass: rgba(15, 25, 43, 0.88);
+  --bo-surface-card: #0f192b;
+
+  /* Borders */
   --bo-border: rgba(255, 255, 255, 0.09);
+  --bo-border-subtle: rgba(255, 255, 255, 0.05);
   --bo-border-glow: rgba(249, 115, 22, 0.5);
 
+  /* High-Contrast Typography */
   --bo-text-primary: #f8fafc;
   --bo-text-secondary: #cbd5e1;
   --bo-text-muted: #94a3b8;
 
+  /* Accents (Luminous Cyber Glow) */
+  --bo-accent-orange: #f97316;
+  --bo-accent-orange-bright: #fb923c;
+  --bo-accent-orange-hover: #ea580c;
+  --bo-accent-blue: #38bdf8;
+  --bo-accent-emerald: #10b981;
+  --bo-accent-purple: #a78bfa;
+
+  /* Shadows */
   --bo-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
   --bo-shadow-md: 0 6px 20px rgba(0, 0, 0, 0.5);
   --bo-shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.6);
 }
 
+/* Media Query: Default to Dark ONLY when user prefers dark AND html is NOT .light */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  html:not(.light) {
     --bo-bg: #070d18;
     --bo-surface: #0f192b;
     --bo-surface-hover: #16243b;
-    --bo-surface-glass: rgba(15, 25, 43, 0.85);
+    --bo-surface-glass: rgba(15, 25, 43, 0.88);
+    --bo-surface-card: #0f192b;
     --bo-border: rgba(255, 255, 255, 0.09);
+    --bo-border-subtle: rgba(255, 255, 255, 0.05);
     --bo-border-glow: rgba(249, 115, 22, 0.5);
     --bo-text-primary: #f8fafc;
     --bo-text-secondary: #cbd5e1;
     --bo-text-muted: #94a3b8;
+    --bo-accent-orange: #f97316;
+    --bo-accent-orange-bright: #fb923c;
+    --bo-accent-orange-hover: #ea580c;
+    --bo-accent-blue: #38bdf8;
+    --bo-accent-emerald: #10b981;
+    --bo-accent-purple: #a78bfa;
+    --bo-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --bo-shadow-md: 0 6px 20px rgba(0, 0, 0, 0.5);
+    --bo-shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.6);
   }
 }
 
-/* Base resets & typography */
+/* --------------------------------------------------------------------------
+   3. Base Typography & Global Resets
+   -------------------------------------------------------------------------- */
 body {
   font-family: var(--font-sans);
-  color: var(--bo-text-primary);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================================================
-   1. Bento Hero Section
-   ========================================================================== */
+html.light body {
+  color: #0f172a;
+}
 
+html.dark body {
+  color: #f8fafc;
+}
+
+/* --------------------------------------------------------------------------
+   4. Top Navigation Bar, Brand Logo & Search
+   -------------------------------------------------------------------------- */
+.myst-top-nav {
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+html.light .myst-top-nav {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+html.dark .myst-top-nav {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.myst-home-link {
+  font-weight: 700;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none !important;
+}
+
+.myst-home-link:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+html.light .myst-home-link,
+html.light .myst-home-link span {
+  color: #0f172a !important;
+}
+
+html.dark .myst-home-link,
+html.dark .myst-home-link span {
+  color: #f8fafc !important;
+}
+
+/* Search Bar */
+.myst-search-bar {
+  transition: all 0.2s ease;
+}
+
+html.light .myst-search-bar {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #334155 !important;
+}
+
+html.light .myst-search-bar:hover {
+  border-color: #f97316 !important;
+  background-color: #ffffff !important;
+}
+
+html.light .myst-search-text-placeholder {
+  color: #64748b !important;
+}
+
+html.light .myst-search-shortcut kbd {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #475569 !important;
+}
+
+/* Theme Toggle Button */
+.myst-theme-button {
+  transition: all 0.2s ease;
+}
+
+html.light .myst-theme-button {
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  background-color: #ffffff;
+}
+
+html.light .myst-theme-button:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #f97316 !important;
+  color: #ea580c !important;
+}
+
+html.dark .myst-theme-button {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #f8fafc !important;
+  background-color: #0f192b;
+}
+
+html.dark .myst-theme-button:hover {
+  background-color: #16243b !important;
+  border-color: #f97316 !important;
+  color: #f97316 !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Primary Sidebar (Left Navigation / TOC)
+   -------------------------------------------------------------------------- */
+.myst-primary-sidebar {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Normal TOC entries and folders */
+.myst-toc,
+.myst-toc a,
+.myst-toc div {
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+html.light .myst-toc,
+html.light .myst-toc a,
+html.light .myst-toc div {
+  color: #334155 !important;
+}
+
+html.dark .myst-toc,
+html.dark .myst-toc a,
+html.dark .myst-toc div {
+  color: #cbd5e1 !important;
+}
+
+/* Top portfolio title in sidebar */
+.myst-toc > a[aria-current="page"],
+.myst-toc > a:first-child,
+.myst-toc-item.font-bold {
+  font-weight: 700 !important;
+}
+
+html.light .myst-toc > a[aria-current="page"],
+html.light .myst-toc > a:first-child,
+html.light .myst-toc-item.font-bold {
+  color: #0f172a !important;
+}
+
+html.dark .myst-toc > a[aria-current="page"],
+html.dark .myst-toc > a:first-child,
+html.dark .myst-toc-item.font-bold {
+  color: #f8fafc !important;
+}
+
+/* Sidebar Item Hover States */
+html.light .myst-toc-item:hover,
+html.light .myst-toc a:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+html.dark .myst-toc-item:hover,
+html.dark .myst-toc a:hover {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: #f8fafc !important;
+}
+
+/* Active Link in Sidebar */
+html.light .myst-toc-item.active,
+html.light .myst-toc a.active {
+  background-color: rgba(249, 115, 22, 0.09) !important;
+  color: #ea580c !important;
+  font-weight: 600 !important;
+}
+
+html.dark .myst-toc-item.active,
+html.dark .myst-toc a.active {
+  background-color: rgba(249, 115, 22, 0.16) !important;
+  color: #fb923c !important;
+  font-weight: 600 !important;
+}
+
+/* Folder Chevron Toggle Icons */
+.myst-toc button svg,
+.myst-toc svg {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+html.light .myst-toc button svg,
+html.light .myst-toc svg {
+  color: #64748b !important;
+  fill: currentColor;
+}
+
+html.dark .myst-toc button svg,
+html.dark .myst-toc svg {
+  color: #94a3b8 !important;
+  fill: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   6. Right Margins & "Contents" (On this page) Navigation
+   -------------------------------------------------------------------------- */
+html.light nav[aria-label="Table of Contents"] a,
+html.light .col-margin-right a,
+html.light .col-margin a {
+  color: #475569 !important;
+  transition: color 0.15s ease;
+}
+
+html.light nav[aria-label="Table of Contents"] a:hover,
+html.light .col-margin-right a:hover {
+  color: #ea580c !important;
+}
+
+html.dark nav[aria-label="Table of Contents"] a,
+html.dark .col-margin-right a,
+html.dark .col-margin a {
+  color: #94a3b8 !important;
+  transition: color 0.15s ease;
+}
+
+html.dark nav[aria-label="Table of Contents"] a:hover,
+html.dark .col-margin-right a:hover {
+  color: #fb923c !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. Bento Hero Section
+   -------------------------------------------------------------------------- */
 .bento-hero {
   position: relative;
-  background: var(--bo-surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--bo-border);
   border-radius: var(--bo-card-radius);
   padding: 2.25rem 2rem;
   margin: 1.5rem 0 2rem 0;
-  box-shadow: var(--bo-shadow-md);
   overflow: hidden;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bento-hero::before {
@@ -96,16 +354,41 @@ body {
   position: absolute;
   top: -120px;
   right: -120px;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, rgba(2, 132, 199, 0.08) 60%, transparent 80%);
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
   pointer-events: none;
   z-index: 0;
+  transition: background 0.3s ease;
 }
 
 .bento-hero-inner {
   position: relative;
   z-index: 1;
+}
+
+/* Hero Light Mode */
+html.light .bento-hero,
+:root:not(.dark) .bento-hero {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.94) 100%);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.05), 0 2px 8px rgba(15, 23, 42, 0.02);
+}
+
+html.light .bento-hero::before,
+:root:not(.dark) .bento-hero::before {
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.09) 0%, rgba(2, 132, 199, 0.04) 55%, transparent 75%);
+}
+
+/* Hero Dark Mode */
+html.dark .bento-hero {
+  background: linear-gradient(135deg, rgba(15, 25, 43, 0.92) 0%, rgba(10, 18, 32, 0.88) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .bento-hero::before {
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.18) 0%, rgba(2, 132, 199, 0.1) 60%, transparent 80%);
 }
 
 /* Status Pill */
@@ -114,14 +397,24 @@ body {
   align-items: center;
   gap: 0.55rem;
   padding: 0.35rem 0.85rem;
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.3);
   border-radius: 9999px;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #10b981;
   letter-spacing: 0.01em;
   margin-bottom: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+html.light .hero-status-pill {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #047857 !important;
+}
+
+html.dark .hero-status-pill {
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981 !important;
 }
 
 .pulse-indicator {
@@ -150,25 +443,53 @@ body {
   100% { transform: scale(2.8); opacity: 0; }
 }
 
-.hero-main-title {
-  font-size: 2.3rem;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: var(--bo-text-primary);
-  margin: 0 0 0.75rem 0;
+/* Hero Headings */
+.bento-hero h1,
+.bento-hero h2,
+.bento-hero .hero-main-title,
+.bento-hero .heading-text {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.025em !important;
+  margin: 0 0 0.75rem 0 !important;
+  border-bottom: none !important;
 }
 
-.hero-subhead {
-  font-size: 1.1rem;
-  color: var(--bo-text-secondary);
-  max-width: 740px;
-  margin: 0 0 1.5rem 0;
-  font-weight: 400;
-  line-height: 1.55;
+html.light .bento-hero h1,
+html.light .bento-hero h2,
+html.light .bento-hero .hero-main-title,
+html.light .bento-hero .heading-text {
+  color: #0f172a !important;
 }
 
-/* Hero Action Buttons & Chips */
+html.dark .bento-hero h1,
+html.dark .bento-hero h2,
+html.dark .bento-hero .hero-main-title,
+html.dark .bento-hero .heading-text {
+  color: #f8fafc !important;
+}
+
+/* Hero Subtitle */
+.bento-hero p,
+.bento-hero .hero-subhead {
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  max-width: 740px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+html.light .bento-hero p,
+html.light .bento-hero .hero-subhead {
+  color: #334155 !important;
+}
+
+html.dark .bento-hero p,
+html.dark .bento-hero .hero-subhead {
+  color: #cbd5e1 !important;
+}
+
+/* Hero Action Buttons */
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -181,53 +502,85 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  padding: 0.6rem 1.15rem;
+  padding: 0.58rem 1.15rem;
   border-radius: 10px;
   text-decoration: none !important;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
+/* Primary Hero Button */
 .hero-btn-primary {
-  background: var(--bo-accent-orange);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: #ffffff !important;
-  border: 1px solid var(--bo-accent-orange-hover);
-  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.25);
+  border: 1px solid #ea580c;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.28);
 }
 
 .hero-btn-primary:hover {
-  background: var(--bo-accent-orange-hover);
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+  box-shadow: 0 5px 16px rgba(249, 115, 22, 0.4);
+  color: #ffffff !important;
 }
 
-.hero-btn-secondary {
-  background: var(--bo-surface);
-  color: var(--bo-text-primary) !important;
-  border: 1px solid var(--bo-border);
+/* Secondary Hero Button — Light Mode */
+html.light .hero-btn-secondary {
+  background: #ffffff;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
 }
 
-.hero-btn-secondary:hover {
-  background: var(--bo-surface-hover);
-  border-color: var(--bo-accent-orange);
+html.light .hero-btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #f97316;
+  color: #ea580c !important;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
 }
 
-/* ==========================================================================
-   2. Tech Stack Ticker (BrewedOps Marquee)
-   ========================================================================== */
+/* Secondary Hero Button — Dark Mode */
+html.dark .hero-btn-secondary {
+  background: #16243b;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
+html.dark .hero-btn-secondary:hover {
+  background: #1f3352;
+  border-color: #f97316;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   8. Tech Stack Ticker (Marquee)
+   -------------------------------------------------------------------------- */
 .ticker-wrapper {
   position: relative;
   overflow: hidden;
-  background: var(--bo-surface);
-  border: 1px solid var(--bo-border);
   border-radius: 12px;
   padding: 0.75rem 0;
   margin: 1.5rem 0 2.25rem 0;
   white-space: nowrap;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+html.light .ticker-wrapper {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+html.dark .ticker-wrapper {
+  background: #0f192b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .ticker-track {
@@ -248,11 +601,19 @@ body {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--bo-text-secondary);
+  transition: color 0.2s ease;
+}
+
+html.light .ticker-item {
+  color: #334155;
+}
+
+html.dark .ticker-item {
+  color: #94a3b8;
 }
 
 .ticker-dot {
-  color: var(--bo-accent-orange);
+  color: #f97316;
   font-size: 0.75rem;
 }
 
@@ -261,10 +622,9 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* ==========================================================================
-   3. Metrics & Stats Grid
-   ========================================================================== */
-
+/* --------------------------------------------------------------------------
+   9. Metrics & Stats Grid
+   -------------------------------------------------------------------------- */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -273,59 +633,102 @@ body {
 }
 
 .stat-card {
-  background: var(--bo-surface);
-  border: 1px solid var(--bo-border);
   border-radius: var(--bo-card-radius);
   padding: 1.25rem 1.4rem;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: var(--bo-shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.25s ease;
 }
 
-.stat-card:hover {
+html.light .stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+html.light .stat-card:hover {
   transform: translateY(-3px);
-  border-color: var(--bo-accent-orange);
-  box-shadow: var(--bo-shadow-md);
+  border-color: #f97316;
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.12);
+}
+
+html.dark .stat-card {
+  background: #0f192b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+html.dark .stat-card:hover {
+  transform: translateY(-3px);
+  border-color: #f97316;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.25);
 }
 
 .stat-num {
   font-size: 1.85rem;
   font-weight: 800;
   font-family: var(--font-mono);
-  color: var(--bo-accent-orange);
   line-height: 1;
   margin-bottom: 0.35rem;
+  font-variant-numeric: tabular-nums;
+}
+
+html.light .stat-num {
+  color: #ea580c;
+}
+
+html.dark .stat-num {
+  color: #f97316;
 }
 
 .stat-label {
   font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--bo-text-primary);
+  font-weight: 700;
   margin-bottom: 0.15rem;
+}
+
+html.light .stat-label {
+  color: #0f172a;
+}
+
+html.dark .stat-label {
+  color: #f8fafc;
 }
 
 .stat-desc {
   font-size: 0.78rem;
-  color: var(--bo-text-muted);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
-/* ==========================================================================
-   4. Bento Grid Cards (Projects & Labs)
-   ========================================================================== */
+html.light .stat-desc {
+  color: #64748b;
+}
 
+html.dark .stat-desc {
+  color: #94a3b8;
+}
+
+/* --------------------------------------------------------------------------
+   10. Bento Grid Cards (Projects & Labs)
+   -------------------------------------------------------------------------- */
 .bento-section-title {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--bo-text-primary);
   margin: 2.5rem 0 1.25rem 0;
   letter-spacing: -0.01em;
 }
 
+html.light .bento-section-title {
+  color: #0f172a;
+}
+
+html.dark .bento-section-title {
+  color: #f8fafc;
+}
+
 .section-bullet {
-  color: var(--bo-accent-orange);
+  color: #f97316;
   font-size: 1.2rem;
 }
 
@@ -338,22 +741,37 @@ body {
 
 .bento-card {
   position: relative;
-  background: var(--bo-surface);
-  border: 1px solid var(--bo-border);
   border-radius: var(--bo-card-radius);
   padding: 1.6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: var(--bo-shadow-sm);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
 
-.bento-card:hover {
+html.light .bento-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+html.light .bento-card:hover {
   transform: translateY(-4px);
-  border-color: var(--bo-accent-orange);
-  box-shadow: 0 12px 28px -4px rgba(249, 115, 22, 0.12), var(--bo-shadow-md);
+  border-color: #f97316;
+  box-shadow: 0 12px 28px -4px rgba(249, 115, 22, 0.12), 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+html.dark .bento-card {
+  background: #0f192b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+html.dark .bento-card:hover {
+  transform: translateY(-4px);
+  border-color: #f97316;
+  box-shadow: 0 14px 32px -4px rgba(249, 115, 22, 0.2), 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .bento-card-header {
@@ -364,6 +782,7 @@ body {
   margin-bottom: 0.85rem;
 }
 
+/* Category Tags */
 .bento-tag {
   display: inline-block;
   padding: 0.25rem 0.65rem;
@@ -373,61 +792,128 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Orange default */
+html.light .bento-tag {
   background: rgba(249, 115, 22, 0.1);
-  color: var(--bo-accent-orange);
-  border: 1px solid rgba(249, 115, 22, 0.25);
+  color: #c2410c;
+  border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
-.bento-tag.tag-blue {
-  background: rgba(2, 132, 199, 0.1);
-  color: var(--bo-accent-blue);
-  border-color: rgba(2, 132, 199, 0.25);
+html.dark .bento-tag {
+  background: rgba(249, 115, 22, 0.15);
+  color: #fb923c;
+  border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
-.bento-tag.tag-emerald {
+/* Emerald */
+html.light .bento-tag.tag-emerald {
   background: rgba(16, 185, 129, 0.1);
-  color: var(--bo-accent-emerald);
-  border-color: rgba(16, 185, 129, 0.25);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
-.bento-tag.tag-purple {
+html.dark .bento-tag.tag-emerald {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Blue */
+html.light .bento-tag.tag-blue {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0369a1;
+  border: 1px solid rgba(2, 132, 199, 0.3);
+}
+
+html.dark .bento-tag.tag-blue {
+  background: rgba(2, 132, 199, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(2, 132, 199, 0.3);
+}
+
+/* Purple */
+html.light .bento-tag.tag-purple {
   background: rgba(139, 92, 246, 0.1);
-  color: var(--bo-accent-purple);
-  border-color: rgba(139, 92, 246, 0.25);
+  color: #6d28d9;
+  border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
-.bento-card-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--bo-text-primary);
-  line-height: 1.35;
-  margin: 0 0 0.5rem 0;
+html.dark .bento-tag.tag-purple {
+  background: rgba(139, 92, 246, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
-.bento-card-title a {
-  color: inherit;
-  text-decoration: none;
+/* Card Titles */
+.bento-card-title,
+.bento-card-title a,
+.bento-card h3,
+.bento-card h4 {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin: 0 0 0.5rem 0 !important;
+  border-bottom: none !important;
 }
 
-.bento-card-title a:hover {
-  color: var(--bo-accent-orange);
+html.light .bento-card-title,
+html.light .bento-card-title a,
+html.light .bento-card h3,
+html.light .bento-card h4 {
+  color: #0f172a !important;
 }
 
-.bento-card-body {
-  font-size: 0.88rem;
-  color: var(--bo-text-secondary);
-  line-height: 1.55;
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
+html.light .bento-card-title a:hover {
+  color: #ea580c !important;
 }
 
+html.dark .bento-card-title,
+html.dark .bento-card-title a,
+html.dark .bento-card h3,
+html.dark .bento-card h4 {
+  color: #f8fafc !important;
+}
+
+html.dark .bento-card-title a:hover {
+  color: #f97316 !important;
+}
+
+/* Card Body */
+.bento-card-body,
+.bento-card p {
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+html.light .bento-card-body,
+html.light .bento-card p {
+  color: #475569 !important;
+}
+
+html.dark .bento-card-body,
+html.dark .bento-card p {
+  color: #cbd5e1 !important;
+}
+
+/* Card Footer */
 .bento-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
-  border-top: 1px solid var(--bo-border);
   font-size: 0.82rem;
+}
+
+html.light .bento-card-footer {
+  border-top: 1px solid #f1f5f9;
+}
+
+html.dark .bento-card-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .bento-links {
@@ -441,33 +927,292 @@ body {
   align-items: center;
   gap: 0.3rem;
   font-weight: 600;
-  color: var(--bo-accent-orange);
   text-decoration: none !important;
   transition: transform 0.15s ease, color 0.15s ease;
 }
 
-.bento-link:hover {
-  color: var(--bo-accent-orange-hover);
-  transform: translateX(2px);
+html.light .bento-link {
+  color: #ea580c !important;
+}
+
+html.light .bento-link:hover {
+  color: #c2410c !important;
+  transform: translateX(3px);
+}
+
+html.dark .bento-link {
+  color: #f97316 !important;
+}
+
+html.dark .bento-link:hover {
+  color: #fdba74 !important;
+  transform: translateX(3px);
 }
 
 .bento-sublink {
   font-size: 0.8rem;
-  color: var(--bo-text-muted);
   text-decoration: none !important;
+  transition: color 0.15s ease;
 }
 
-.bento-sublink:hover {
-  color: var(--bo-text-primary);
+html.light .bento-sublink {
+  color: #64748b !important;
 }
 
-/* ==========================================================================
-   5. Responsive Adjustments
-   ========================================================================== */
+html.light .bento-sublink:hover {
+  color: #0f172a !important;
+}
 
+html.dark .bento-sublink {
+  color: #94a3b8 !important;
+}
+
+html.dark .bento-sublink:hover {
+  color: #f8fafc !important;
+}
+
+/* --------------------------------------------------------------------------
+   11. Article Headings, Tables & Content Blocks
+   -------------------------------------------------------------------------- */
+html.light .myst-fm-block-title {
+  color: #0f172a !important;
+}
+
+html.dark .myst-fm-block-title {
+  color: #f8fafc !important;
+}
+
+html.light .myst-fm-author-name {
+  color: #475569 !important;
+}
+
+html.dark .myst-fm-author-name {
+  color: #94a3b8 !important;
+}
+
+/* General Article Headings */
+html.light article h1,
+html.light article h2,
+html.light article h3,
+html.light article h4 {
+  color: #0f172a;
+}
+
+html.dark article h1,
+html.dark article h2,
+html.dark article h3,
+html.dark article h4 {
+  color: #f8fafc;
+}
+
+/* General Article Paragraphs & Lists */
+html.light article p,
+html.light article li {
+  color: #334155;
+}
+
+html.dark article p,
+html.dark article li {
+  color: #cbd5e1;
+}
+
+/* Tables across Project Pages and Notebooks */
+article table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  transition: all 0.2s ease;
+}
+
+html.light article table {
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+}
+
+html.light article table th {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-weight: 700;
+  border-bottom: 2px solid #e2e8f0;
+  padding: 0.75rem 1rem;
+}
+
+html.light article table td {
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 0.75rem 1rem;
+}
+
+html.light article table tr:hover td {
+  background-color: #f8fafc;
+}
+
+html.dark article table {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+html.dark article table th {
+  background-color: #16243b;
+  color: #f8fafc;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+  padding: 0.75rem 1rem;
+}
+
+html.dark article table td {
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 1rem;
+}
+
+html.dark article table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Iframes & Media */
+article iframe {
+  border-radius: 12px;
+  border: 1px solid var(--bo-border);
+  box-shadow: var(--bo-shadow-md);
+  background: var(--bo-surface);
+}
+
+article img {
+  border-radius: 12px;
+  box-shadow: var(--bo-shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+html.light article img {
+  border: 1px solid #e2e8f0;
+}
+
+html.dark article img {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Horizontal Dividers */
+html.light hr {
+  border-color: #e2e8f0 !important;
+}
+
+html.dark hr {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Footer Previous / Next Navigation */
+.myst-footer-link {
+  transition: all 0.2s ease;
+}
+
+html.light .myst-footer-link {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+html.light .myst-footer-link:hover {
+  border-color: #f97316 !important;
+  color: #ea580c !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.12);
+}
+
+html.dark .myst-footer-link {
+  background: #0f192b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f8fafc !important;
+}
+
+html.dark .myst-footer-link:hover {
+  border-color: #f97316 !important;
+  color: #f97316 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.25);
+}
+
+/* Inline Code Badges */
+html.light article code:not(pre code) {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+html.dark article code:not(pre code) {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+/* Notebook Outputs */
+html.light .jp-OutputArea-output,
+html.light .output {
+  color: #334155;
+}
+
+html.dark .jp-OutputArea-output,
+html.dark .output {
+  color: #cbd5e1;
+}
+
+/* Focus States for Accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #f97316 !important;
+  outline-offset: 2px !important;
+}
+
+/* --------------------------------------------------------------------------
+   12. Smooth Transitions & Motion Preferences
+   -------------------------------------------------------------------------- */
+body,
+.bento-hero,
+.ticker-wrapper,
+.stat-card,
+.bento-card,
+.myst-top-nav,
+.myst-primary-sidebar,
+.myst-footer-link,
+article table,
+article th,
+article td {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. Responsive Adjustments
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-  .hero-main-title {
-    font-size: 1.85rem;
+  .bento-hero h1,
+  .bento-hero h2,
+  .bento-hero .hero-main-title,
+  .bento-hero .heading-text {
+    font-size: 1.85rem !important;
   }
   .bento-hero {
     padding: 1.5rem 1.25rem;
