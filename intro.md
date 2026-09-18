@@ -63,7 +63,7 @@
     <div class="stat-desc">BCa income uncertainty intervals in R</div>
   </div>
   <div class="stat-card">
-    <div class="stat-num">6</div>
+    <div class="stat-num">7</div>
     <div class="stat-label">Deep Learning Labs</div>
     <div class="stat-desc">Pure NumPy &amp; PyTorch neural implementations</div>
   </div>
@@ -252,6 +252,24 @@
     </div>
     <div class="bento-card-footer">
       <a class="bento-link" href="notebooks/06_lab_task_5.ipynb">Open Notebook &rarr;</a>
+    </div>
+  </div>
+
+  <div class="bento-card">
+    <div>
+      <div class="bento-card-header">
+        <span class="bento-tag tag-purple">Lab Task 6</span>
+        <span class="bento-sublink">CNN Architecture</span>
+      </div>
+      <h3 class="bento-card-title">
+        <a href="notebooks/07_lab_task_6.ipynb">CNN Architecture Translation</a>
+      </h3>
+      <p class="bento-card-body">
+        Translating a multi-stage Quick, Draw! CNN diagram into a PyTorch nn.Module with dimensional tracking, dropout, and parameter verification.
+      </p>
+    </div>
+    <div class="bento-card-footer">
+      <a class="bento-link" href="notebooks/07_lab_task_6.ipynb">Open Notebook &rarr;</a>
     </div>
   </div>
 </div>
