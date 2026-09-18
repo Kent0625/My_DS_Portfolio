@@ -18,6 +18,7 @@ project:
         - file: notebooks/04_lab_task_3.ipynb
         - file: notebooks/05_lab_task_4.ipynb
         - file: notebooks/06_lab_task_5.ipynb
+        - file: notebooks/07_lab_task_6.ipynb
 site:
   template: book-theme
   title: "Kent John Macalam | Data Science Portfolio"
