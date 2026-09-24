@@ -300,6 +300,23 @@
       <a class="bento-link" href="notebooks/07_lab_task_6.ipynb">Open Notebook &rarr;</a>
     </div>
   </div>
+  <div class="bento-card">
+    <div>
+      <div class="bento-card-header">
+        <span class="bento-tag tag-blue">Deep Learning</span>
+        <span class="bento-sublink">Transfer Learning</span>
+      </div>
+      <h3 class="bento-card-title">
+        <a href="notebooks/Laboratory Exercise - Image Classification Using Pre-trained Models.ipynb">Pre-trained CNN Classification</a>
+      </h3>
+      <p class="bento-card-body">
+        Curating a custom biological dataset (Molly vs. Guppy) and benchmarking five pre-trained torchvision architectures (ResNet, MobileNet, EfficientNet, DenseNet, VGG) using PyTorch DataLoaders.
+      </p>
+    </div>
+    <div class="bento-card-footer">
+      <a class="bento-link" href="notebooks/Laboratory Exercise - Image Classification Using Pre-trained Models.ipynb">Open Notebook &rarr;</a>
+    </div>
+  </div>
 </div>
 
 ---
