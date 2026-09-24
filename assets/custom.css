@@ -920,6 +920,19 @@ html.dark .bento-tag.tag-purple {
   border: 1px solid rgba(167, 139, 250, 0.35);
 }
 
+/* Rose Tag */
+html.light .bento-tag.tag-rose {
+  background: rgba(225, 29, 72, 0.12);
+  color: #be123c;
+  border: 1px solid rgba(225, 29, 72, 0.3);
+}
+
+html.dark .bento-tag.tag-rose {
+  background: rgba(244, 63, 94, 0.16);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.35);
+}
+
 /* Card Titles */
 .bento-card-title,
 .bento-card-title a,

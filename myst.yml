@@ -10,6 +10,7 @@ project:
         - file: projects/01_life_of_a_bill.md
         - file: projects/02_from_farm_to_cup.md
         - file: projects/03_smartrip_cdo.md
+        - file: projects/04_us_diabetes_3d_choropleth.md
     - title: "Laboratory Activities"
       children:
         - file: notebooks/01_lab_task_1.ipynb

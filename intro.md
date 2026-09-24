@@ -31,6 +31,9 @@
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> Hugging Face</span>
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> Google Gemini</span>
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> R &amp; BCa Bootstrap</span>
+    <span class="ticker-item"><span class="ticker-dot">&bull;</span> R &amp; rayshader</span>
+    <span class="ticker-item"><span class="ticker-dot">&bull;</span> Three.js / WebGL</span>
+    <span class="ticker-item"><span class="ticker-dot">&bull;</span> Spatial sf</span>
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> MyST Markdown</span>
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> Python 3</span>
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> PyTorch</span>
@@ -42,6 +45,9 @@
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> Hugging Face</span>
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> Google Gemini</span>
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> R &amp; BCa Bootstrap</span>
+    <span class="ticker-item"><span class="ticker-dot">&bull;</span> R &amp; rayshader</span>
+    <span class="ticker-item"><span class="ticker-dot">&bull;</span> Three.js / WebGL</span>
+    <span class="ticker-item"><span class="ticker-dot">&bull;</span> Spatial sf</span>
     <span class="ticker-item"><span class="ticker-dot">&bull;</span> MyST Markdown</span>
   </div>
 </div>
@@ -53,9 +59,9 @@
     <div class="stat-desc">XGBoost legislative progression modeling</div>
   </div>
   <div class="stat-card">
-    <div class="stat-num">47</div>
-    <div class="stat-label">Curated CDO POIs</div>
-    <div class="stat-desc">Static RAG tourism itinerary generation</div>
+    <div class="stat-num">3,108</div>
+    <div class="stat-label">U.S. Counties Mapped</div>
+    <div class="stat-desc">3D rayshader &amp; WebGL spatial cartography</div>
   </div>
   <div class="stat-card">
     <div class="stat-num">2,000</div>
@@ -63,9 +69,9 @@
     <div class="stat-desc">BCa income uncertainty intervals in R</div>
   </div>
   <div class="stat-card">
-    <div class="stat-num">7</div>
-    <div class="stat-label">Deep Learning Labs</div>
-    <div class="stat-desc">Pure NumPy &amp; PyTorch neural implementations</div>
+    <div class="stat-num">47</div>
+    <div class="stat-label">Curated CDO POIs</div>
+    <div class="stat-desc">Static RAG tourism itinerary generation</div>
   </div>
 </div>
 
@@ -136,6 +142,28 @@
       <div class="bento-links">
         <a class="bento-sublink" href="https://kent0625-smartrip-cdo.hf.space" target="_blank" rel="noopener">Live App &nearr;</a>
         <a class="bento-sublink" href="https://github.com/Kent0625/smartrip_cdo" target="_blank" rel="noopener">GitHub &nearr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bento-card">
+    <div>
+      <div class="bento-card-header">
+        <span class="bento-tag tag-rose">Geospatial &amp; 3D Viz</span>
+        <span class="bento-sublink">3,108 U.S. Counties</span>
+      </div>
+      <h3 class="bento-card-title">
+        <a href="projects/04_us_diabetes_3d_choropleth.md">U.S. Diabetes 3D Choropleth</a>
+      </h3>
+      <p class="bento-card-body">
+        Interactive 3D spatial cartography and rayshader extrusion mapping adult diabetes prevalence across contiguous U.S. counties with real-time WebGL orbit controls.
+      </p>
+    </div>
+    <div class="bento-card-footer">
+      <a class="bento-link" href="projects/04_us_diabetes_3d_choropleth.md">Case Study &rarr;</a>
+      <div class="bento-links">
+        <a class="bento-sublink" href="https://kent0625.github.io/Data_Viz_Project/" target="_blank" rel="noopener">Live App &nearr;</a>
+        <a class="bento-sublink" href="https://github.com/Kent0625/Data_Viz_Project" target="_blank" rel="noopener">GitHub &nearr;</a>
       </div>
     </div>
   </div>
