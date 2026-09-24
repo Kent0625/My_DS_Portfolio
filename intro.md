@@ -355,7 +355,7 @@
     </div>
     <div class="profile-field">
       <span class="profile-label">Primary Portfolio (Vercel)</span>
-      <span class="profile-value"><a href="https://portfolio-git-main-kent0625s-projects.vercel.app/" target="_blank" rel="noopener">Kent John U. Macalam — Data Science &amp; Machine Learning Portfolio <span class="profile-arrow">&nearr;</span></a></span>
+      <span class="profile-value"><a href="https://portfolio-two-black-84.vercel.app/" target="_blank" rel="noopener">Kent John U. Macalam — Data Science &amp; Machine Learning Portfolio <span class="profile-arrow">&nearr;</span></a></span>
     </div>
     <div class="profile-field">
       <span class="profile-label">Resume</span>
