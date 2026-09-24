@@ -20,6 +20,8 @@ project:
         - file: notebooks/05_lab_task_4.ipynb
         - file: notebooks/06_lab_task_5.ipynb
         - file: notebooks/07_lab_task_6.ipynb
+        - file: "notebooks/Laboratory Exercise - Image Classification Using Pre-trained Models.ipynb"
+          title: "Laboratory Exercise: Image Classification Using Pre-trained Models"
 site:
   template: book-theme
   title: "Kent John Macalam | Data Science Portfolio"
