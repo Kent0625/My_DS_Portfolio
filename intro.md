@@ -354,8 +354,8 @@
       <span class="profile-value"><a href="https://www.linkedin.com/in/kent-john-macalam-4229a52b3/" target="_blank" rel="noopener">Kent John Macalam <span class="profile-arrow">&nearr;</span></a></span>
     </div>
     <div class="profile-field">
-      <span class="profile-label">Primary Portfolio (Render)</span>
-      <span class="profile-value"><a href="https://kent-macalam-portfolio.onrender.com/" target="_blank" rel="noopener">kent-macalam-portfolio.onrender.com <span class="profile-arrow">&nearr;</span></a></span>
+      <span class="profile-label">Primary Portfolio (Vercel)</span>
+      <span class="profile-value"><a href="https://portfolio-git-main-kent0625s-projects.vercel.app/" target="_blank" rel="noopener">Kent John U. Macalam — Data Science &amp; Machine Learning Portfolio <span class="profile-arrow">&nearr;</span></a></span>
     </div>
     <div class="profile-field">
       <span class="profile-label">Resume</span>
