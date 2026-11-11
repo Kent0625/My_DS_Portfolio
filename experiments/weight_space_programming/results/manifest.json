@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "started_utc": "2026-11-11T05:26:51.491195+00:00",
+  "config": {
+    "epochs": 10,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "train_per_class": 1000,
+    "val_per_class": 500,
+    "split_seed": 2026,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "methods": [
+      "he",
+      "xavier",
+      "wsp"
+    ]
+  },
+  "device": "cpu",
+  "parameter_count": 446,
+  "classes": {
+    "0": "T-shirt/top",
+    "1": "Trouser"
+  },
+  "preprocessing": "pixels / 255; nonoverlapping 4x4 average pooling; flatten 7x7",
+  "wsp_weights_sha256": "410909bd588dcf5caaa31c2f2154b3eaefb6234a66c50d7a57d8abe32e0ff00b",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "versions": {
+    "torch": "2.5.1+cpu",
+    "torchvision": "0.20.1+cpu",
+    "lightning": "2.5.0.post0",
+    "numpy": "2.2.2",
+    "matplotlib": "3.10.0"
+  },
+  "test_set_used": false,
+  "git_commit": "725338f534da2608f1363f3e9d73d7b75829bae7",
+  "finished_utc": "2026-11-11T05:27:01.005916+00:00",
+  "executed_by": "ChatGPT at user request",
+  "script_sha256": "a22518ea3348c5631b034bb9273bc5d34e2c86337ed40f5362a0fea5d1e4ff07"
+}

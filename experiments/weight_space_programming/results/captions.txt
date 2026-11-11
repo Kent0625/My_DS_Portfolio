@@ -1,0 +1,5 @@
+Figure 1. Training and validation cross-entropy after each epoch. Lines show means across 3 seeds; shaded bands show one sample standard deviation, not confidence intervals. Lower loss is better. Epoch 0 is before Adam updates.
+
+Figure 2. Training and validation accuracy for the same runs. Higher is better. Epoch 0 for LLM-written weights is its performance without data-based training. The subsequent LLM-written curve includes Adam training.
+
+Table: summary.csv contains initial and final metrics, with accuracy recorded as fractions (multiply by 100 for percentages). Add your own sentence explaining what each figure shows after inspecting the measured results.

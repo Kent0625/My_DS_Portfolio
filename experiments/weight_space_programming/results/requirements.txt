@@ -1,0 +1,5 @@
+torch==2.5.1
+torchvision==0.20.1
+lightning==2.5.0.post0
+numpy==2.2.2
+matplotlib==3.10.0
