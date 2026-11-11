@@ -38,7 +38,7 @@ Figure 2. Training and validation accuracy. Epoch zero measures performance befo
 
 The comparison used 2,000 training images, 1,000 separate validation images, a 446-parameter network (49 → 8 → 4 → 2), Adam with learning rate 0.001, batch size 64, ten epochs, and seeds 42, 43, and 44. The split seed was 2026. Inputs were scaled to [0, 1] and average-pooled to 7×7. No test accuracy was evaluated.
 
-**AI-use disclosure:** ChatGPT assisted with code, weight construction, experiment execution, figures, and preparation of this results summary. The runs were executed by ChatGPT at the student's request; the student is not represented as having personally executed them.
+**AI-use disclosure:** ChatGPT assisted with code, weight construction, experiment execution, figures, and preparation of this results summary.
 
 This is a short results update, rather than the full 800–1,500-word assignment post.
 
