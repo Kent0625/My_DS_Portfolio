@@ -11,6 +11,8 @@ project:
         - file: projects/02_from_farm_to_cup.md
         - file: projects/03_smartrip_cdo.md
         - file: projects/04_us_diabetes_3d_choropleth.md
+    - title: "Blog Posts"
+      children:
         - file: projects/05_weight_space_programming.md
     - title: "Laboratory Activities"
       children:
