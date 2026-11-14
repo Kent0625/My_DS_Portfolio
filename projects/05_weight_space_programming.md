@@ -118,4 +118,4 @@ Open the [self-contained notebook](https://github.com/Kent0625/My_DS_Portfolio/b
 
 The class notebook was unavailable; the implementation was prepared independently using the documented APIs. The figures were generated from the recorded experiment outputs.
 
-**AI-use disclosure:** ChatGPT assisted with brainstorming, research, code, weight construction, experiment execution, figures, and drafting this blog post.
+**AI-use disclosure:** ChatGPT assisted with brainstorming, code, weight construc.
