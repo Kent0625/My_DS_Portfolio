@@ -5,6 +5,11 @@ project:
     - name: "Kent John U. Macalam"
   toc:
     - file: intro.md
+    - title: "Fourth-year coursework"
+      children:
+        - file: projects/sunspot-forecast.md
+        - file: projects/cnn-schedules.md
+        - file: projects/tweet-exploration.md
     - title: "Featured Projects"
       children:
         - file: projects/01_life_of_a_bill.md

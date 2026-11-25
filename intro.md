@@ -8,11 +8,11 @@
     </div>
     <h1 class="hero-main-title">Kent John U. Macalam</h1>
     <p class="hero-subhead">
-      Turning complex datasets into explainable machine learning models, statistical inference workflows, and deep learning architectures.
+      I’m a fourth-year BS Data Science student at USTP seeking Data Science and AI Engineering internships and entry-level roles. My projects cover time series forecasting, image classification, and applied AI.
     </p>
     <div class="hero-actions">
       <a class="hero-btn hero-btn-primary" href="#featured-projects">Explore Projects <span class="btn-icon">&darr;</span></a>
-      <a class="hero-btn hero-btn-secondary" href="assets/documents/Kent_John_Macalam_RESUME.pdf" download="Kent_John_Macalam_RESUME.pdf">Download Resume <span class="btn-icon">&darr;</span></a>
+      <a class="hero-btn hero-btn-secondary" href="https://raw.githubusercontent.com/Kent0625/My_DS_Portfolio/main/assets/documents/Kent_John_Macalam_RESUME.pdf" download="Kent_John_Macalam_RESUME.pdf">Download Resume <span class="btn-icon">&darr;</span></a>
       <a class="hero-btn hero-btn-secondary" href="https://github.com/Kent0625" target="_blank" rel="noopener">GitHub <span class="btn-icon">&nearr;</span></a>
       <a class="hero-btn hero-btn-secondary" href="https://www.linkedin.com/in/kent-john-macalam-4229a52b3/" target="_blank" rel="noopener">LinkedIn <span class="btn-icon">&nearr;</span></a>
     </div>
@@ -79,6 +79,10 @@
 
 (featured-projects)=
 ## Featured Data Science Projects
+
+- **[Forecasting monthly sunspot activity](projects/sunspot-forecast.md)** — 3.88 sunspots RMSE on the 2019 test year.
+- **[Comparing CNN learning-rate schedules](projects/cnn-schedules.md)** — 90.28% peak validation accuracy with cosine scheduling.
+- **[Exploring a corpus of labeled tweets](projects/tweet-exploration.md)** — 1,098 of 41,157 posts contained “quarantine.”
 
 <div class="bento-grid">
   <div class="bento-card">
@@ -329,6 +333,17 @@
 
 ---
 
+## Credentials
+
+Google courses completed through Coursera
+
+- [Google AI Essentials](https://www.coursera.org/verify/V1AXD582VSFN) · April 2025
+- [Foundations: Data, Data, Everywhere](https://www.coursera.org/verify/3GDRXG0Z7G8R) · June 2026
+- [Ask Questions to Make Data-Driven Decisions](https://www.coursera.org/verify/U4KBP4TE1L9C) · June 2026
+- [Prepare Data for Exploration](https://www.coursera.org/verify/89XWAWC5TVKT) · June 2026
+
+I also completed Saktong Communicator and Saktong Professional through Ateneo de Zamboanga University’s Learning to Earning Pathways Programme in November 2026.
+
 ## About Me &amp; Background
 
 <div class="profile-card">
@@ -359,7 +374,7 @@
     </div>
     <div class="profile-field">
       <span class="profile-label">Resume</span>
-      <span class="profile-value"><a href="assets/documents/Kent_John_Macalam_RESUME.pdf" download="Kent_John_Macalam_RESUME.pdf">Kent_John_Macalam_RESUME.pdf <span class="profile-arrow">&darr;</span></a></span>
+      <span class="profile-value"><a href="https://raw.githubusercontent.com/Kent0625/My_DS_Portfolio/main/assets/documents/Kent_John_Macalam_RESUME.pdf" download="Kent_John_Macalam_RESUME.pdf">Kent_John_Macalam_RESUME.pdf <span class="profile-arrow">&darr;</span></a></span>
     </div>
   </div>
 </div>

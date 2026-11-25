@@ -1,6 +1,9 @@
 format: jb-book
 root: intro
 chapters:
+  - file: projects/sunspot-forecast
+  - file: projects/cnn-schedules
+  - file: projects/tweet-exploration
   - file: projects/01_life_of_a_bill
   - file: projects/02_from_farm_to_cup
   - file: projects/03_smartrip_cdo
