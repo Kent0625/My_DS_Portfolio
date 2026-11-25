@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Monthly sunspot forecast explorer</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fbfaf6;color:#1d2e39;font:16px/1.45 system-ui,sans-serif}main{max-width:980px;margin:auto;padding:clamp(14px,3vw,30px)}h1{font-size:clamp(22px,3vw,32px);margin:0}p{margin:5px 0 14px}.controls,.legend{display:flex;align-items:center;flex-wrap:wrap;gap:9px 22px}.controls{margin:16px 0}select{font:inherit;padding:4px}input{accent-color:#176c77}.legend{font-size:14px}.observed{color:#12636f}.forecast{color:#a4421c}canvas{display:block;width:100%;height:clamp(190px,40vh,340px)}label[for=month]{font-weight:600}#month{width:100%;margin:9px 0}output{display:block;font-variant-numeric:tabular-nums;min-height:3em}.note{font-size:13px;color:#455766}
+</style></head><body><main>
+<h1>Monthly sunspot forecast</h1><p>Explore five years of observations and the ARIMA(1,1,0) outlook issued from December 2019.</p>
+<div class="controls"><label>Period <select id="period"><option value="all">History and forecast</option><option value="history">2015–2019 observations</option><option value="forecast">2020–2021 forecast</option></select></label><label><input id="interval" type="checkbox" checked> Show 95% prediction interval</label></div>
+<div class="legend"><span class="observed">━ Observed</span><span class="forecast">┄ Forecast</span><span>Monthly mean sunspot number</span></div>
+<canvas id="chart" aria-label="Monthly sunspot number by date. Use the month slider below to read exact values." role="img"></canvas>
+<label for="month">Inspect month</label><input type="range" id="month" min="0" max="83" value="60"><output id="detail" for="month"></output>
+<p class="note">The shaded band shows model uncertainty. Its negative lower bound is a property of the model; physical counts start at zero.</p>
+</main><script src="./data.js"></script><script src="./chart.js"></script></body></html>

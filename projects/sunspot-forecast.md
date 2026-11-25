@@ -2,6 +2,14 @@
 
 How accurately can recent observations predict a year of solar activity? I tested an ARIMA forecast against the 12 monthly observations from 2019. Its root mean squared error (RMSE) was **3.88 sunspots**.
 
+## Interactive forecast explorer
+
+Choose a period and move the month slider to inspect an observation or forecast. Toggle the prediction interval to see how uncertainty grows across the two-year outlook.
+
+<iframe src="/My_DS_Portfolio/interactive/sunspots/" title="Interactive monthly sunspot forecast" width="100%" height="560" loading="lazy" style="border:1px solid #cbd5d8;border-radius:8px"></iframe>
+
+[Open the explorer full screen](https://kent0625.github.io/My_DS_Portfolio/interactive/sunspots/)
+
 ## Data and evaluation design
 
 The target was the monthly mean total sunspot number. I selected 60 consecutive observations from January 2015 through December 2019 and checked the date and target columns for missing values and duplicate months. I kept the observations in calendar order so every forecast used only data available before its evaluation period.
