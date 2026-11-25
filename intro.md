@@ -80,11 +80,18 @@
 (featured-projects)=
 ## Featured Data Science Projects
 
-- **[Forecasting monthly sunspot activity](projects/sunspot-forecast.md)** — 3.88 sunspots RMSE on the 2019 test year.
-- **[Comparing CNN learning-rate schedules](projects/cnn-schedules.md)** — 90.28% peak validation accuracy with cosine scheduling.
-- **[Exploring a corpus of labeled tweets](projects/tweet-exploration.md)** — 1,098 of 41,157 posts contained “quarantine.”
-
 <div class="bento-grid">
+  <div class="bento-card">
+    <div>
+      <div class="bento-card-header">
+        <span class="bento-tag">Time Series Forecasting</span>
+        <span class="bento-sublink">2019 test RMSE: 3.88</span>
+      </div>
+      <h3 class="bento-card-title"><a href="./sunspot-forecast/">Forecasting monthly sunspot activity</a></h3>
+      <p class="bento-card-body">Can three years of monthly observations predict the next year of solar activity? I compared 121 ARIMA configurations and tested the selected model on a separate year.</p>
+    </div>
+    <div class="bento-card-footer"><a class="bento-link" href="./sunspot-forecast/">Read the forecast case study &rarr;</a></div>
+  </div>
   <div class="bento-card">
     <div>
       <div class="bento-card-header">

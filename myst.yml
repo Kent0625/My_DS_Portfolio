@@ -5,13 +5,9 @@ project:
     - name: "Kent John U. Macalam"
   toc:
     - file: intro.md
-    - title: "Fourth-year coursework"
-      children:
-        - file: projects/sunspot-forecast.md
-        - file: projects/cnn-schedules.md
-        - file: projects/tweet-exploration.md
     - title: "Featured Projects"
       children:
+        - file: projects/sunspot-forecast.md
         - file: projects/01_life_of_a_bill.md
         - file: projects/02_from_farm_to_cup.md
         - file: projects/03_smartrip_cdo.md
@@ -21,6 +17,8 @@ project:
         - file: projects/05_weight_space_programming.md
     - title: "Laboratory Activities"
       children:
+        - file: projects/cnn-schedules.md
+        - file: projects/tweet-exploration.md
         - file: notebooks/01_lab_task_1.ipynb
         - file: notebooks/02_lecture_task_1.ipynb
         - file: notebooks/03_lab_task_2.ipynb
